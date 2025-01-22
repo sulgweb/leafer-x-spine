@@ -21,7 +21,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          npm install  # 安装依赖
+          npm install
 
       - name: Build
         run: npm run build

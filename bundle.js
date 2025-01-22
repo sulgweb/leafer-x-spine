@@ -22597,7 +22597,7 @@ const loadAsset = (_a) => __awaiter$2(void 0, [_a], void 0, function* ({ baseUrl
 
 (() => __awaiter$2(void 0, void 0, void 0, function* () {
     const skeletonData = yield loadAsset({
-        baseUrl: '/models/spineboy/',
+        baseUrl: `${window.location.pathname.split('/')[1]}/models/spineboy/`,
         skelName: 'spineboy.skel',
         atlasName: 'spineboy.atlas',
     });

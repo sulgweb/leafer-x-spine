@@ -25,7 +25,7 @@
   "bugs": "https://github.com/leaferjs/LeaferX/issues",
   "scripts": {
     "start": "cross-env NODE_ENV=development rollup -c -w",
-    "deploy": "cross-env NODE_ENV=deploy rollup -c && gh-pages -d deploy",
+    "deploy": "cross-env NODE_ENV=deploy rollup -c",
     "build": "cross-env PLATFORM=all rollup -c",
     "test": "vitest"
   },

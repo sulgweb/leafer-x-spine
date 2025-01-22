@@ -1,0 +1,40 @@
+name: Deploy to GitHub Pages
+
+# 触发条件：当推送到主分支时触发
+on:
+  push:
+    branches:
+      - main # 这里的 main 是主分支名称，如果是 master，则修改为 master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest # 使用 Ubuntu 环境执行任务
+
+    steps:
+      # 检出当前代码
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # 设置 Node.js 环境
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16' # 你可以根据需要修改 Node.js 版本
+
+      # 安装依赖
+      - name: Install dependencies
+        run: |
+          npm ci  # 安装依赖，确保使用 CI 环境
+
+      # 构建项目
+      - name: Build the project
+        run: |
+          npm run deploy
+
+      # 部署到 GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages # 指定将内容部署到 gh-pages 分支
+          folder: deploy # 你的构建输出目录，根据实际情况修改
+          token: ${{ secrets.GITHUB_TOKEN }} # GitHub 自动生成的访问令牌，用于操作仓库

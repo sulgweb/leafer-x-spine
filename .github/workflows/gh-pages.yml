@@ -1,10 +1,10 @@
 name: Deploy to GitHub Pages
 
-# 触发条件：当推送到主分支时触发
+# 触发条件：当推送到release分支时触发
 on:
   push:
     branches:
-      - main # 这里的 main 是主分支名称，如果是 master，则修改为 master
+      - release
 
 jobs:
   deploy:

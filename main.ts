@@ -4,7 +4,7 @@ import { Spine, loadAsset } from './src' // 引入插件代码
 
 ;(async () => {
   const skeletonData = await loadAsset({
-    baseUrl: `${window.location.pathname.split('/')[1]}/models/spineboy/`,
+    baseUrl: `models/spineboy/`,
     skelName: 'spineboy.skel',
     atlasName: 'spineboy.atlas',
   })

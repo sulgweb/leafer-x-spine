@@ -1,6 +1,6 @@
 {
   "name": "leafer-x-spine",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "xiaoyu <xiaoyu@sulg.top>",
   "license": "MIT",
   "type": "module",
@@ -19,10 +19,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/leaferjs/LeaferX"
+    "url": "https://github.com/sulgweb/leafer-x-spine"
   },
-  "homepage": "https://github.com/leaferjs/LeaferX",
-  "bugs": "https://github.com/leaferjs/LeaferX/issues",
+  "homepage": "https://sulgweb.github.io/leafer-x-spine/",
+  "bugs": "https://github.com/sulgweb/leafer-x-spine/issues",
   "scripts": {
     "start": "cross-env NODE_ENV=development rollup -c -w",
     "deploy": "cross-env NODE_ENV=deploy rollup -c",

@@ -1570,10 +1570,10 @@ const DataHelper = {
         Object.keys(merge).forEach(key => {
             var _a, _b;
             value = merge[key];
-            if ((value === null || value === void 0 ? void 0 : value.constructor) === Object && ((_a = t[key]) === null || _a === void 0 ? void 0 : _a.constructor) === Object)
+            if ((value === null || value === undefined ? undefined : value.constructor) === Object && ((_a = t[key]) === null || _a === undefined ? undefined : _a.constructor) === Object)
                 return assign(t[key], merge[key], exclude && exclude[key]);
             if (exclude && (key in exclude)) {
-                if (((_b = exclude[key]) === null || _b === void 0 ? void 0 : _b.constructor) === Object)
+                if (((_b = exclude[key]) === null || _b === undefined ? undefined : _b.constructor) === Object)
                     assign(t[key] = {}, merge[key], exclude[key]);
                 return;
             }
@@ -1739,7 +1739,7 @@ LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
 OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
 PERFORMANCE OF THIS SOFTWARE.
 ***************************************************************************** */
-/* global Reflect, Promise, SuppressedError, Symbol */
+/* global Reflect, Promise, SuppressedError, Symbol, Iterator */
 
 
 function __decorate$2(decorators, target, key, desc) {
@@ -1807,7 +1807,7 @@ let Canvas$1 = class Canvas {
     }
     setTransform(_a, _b, _c, _d, _e, _f) { }
     resetTransform() { }
-    getTransform() { return void 0; }
+    getTransform() { return undefined; }
     save() { }
     restore() { }
     transform(a, b, c, d, e, f) {
@@ -1864,12 +1864,12 @@ let Canvas$1 = class Canvas {
     ellipse(_x, _y, _radiusX, _radiusY, _rotation, _startAngle, _endAngle, _anticlockwise) { }
     rect(_x, _y, _width, _height) { }
     roundRect(_x, _y, _width, _height, _radius) { }
-    createConicGradient(_startAngle, _x, _y) { return void 0; }
-    createLinearGradient(_x0, _y0, _x1, _y1) { return void 0; }
-    createPattern(_image, _repetition) { return void 0; }
-    createRadialGradient(_x0, _y0, _r0, _x1, _y1, _r1) { return void 0; }
+    createConicGradient(_startAngle, _x, _y) { return undefined; }
+    createLinearGradient(_x0, _y0, _x1, _y1) { return undefined; }
+    createPattern(_image, _repetition) { return undefined; }
+    createRadialGradient(_x0, _y0, _r0, _x1, _y1, _r1) { return undefined; }
     fillText(_text, _x, _y, _maxWidth) { }
-    measureText(_text) { return void 0; }
+    measureText(_text) { return undefined; }
     strokeText(_text, _x, _y, _maxWidth) { }
     destroy() {
         this.context = null;
@@ -1877,79 +1877,79 @@ let Canvas$1 = class Canvas {
 };
 __decorate$2([
     contextAttr('imageSmoothingEnabled')
-], Canvas$1.prototype, "smooth", void 0);
+], Canvas$1.prototype, "smooth", undefined);
 __decorate$2([
     contextAttr('imageSmoothingQuality')
-], Canvas$1.prototype, "smoothLevel", void 0);
+], Canvas$1.prototype, "smoothLevel", undefined);
 __decorate$2([
     contextAttr('globalAlpha')
-], Canvas$1.prototype, "opacity", void 0);
+], Canvas$1.prototype, "opacity", undefined);
 __decorate$2([
     contextAttr()
-], Canvas$1.prototype, "fillStyle", void 0);
+], Canvas$1.prototype, "fillStyle", undefined);
 __decorate$2([
     contextAttr()
-], Canvas$1.prototype, "strokeStyle", void 0);
+], Canvas$1.prototype, "strokeStyle", undefined);
 __decorate$2([
     contextAttr('lineWidth')
-], Canvas$1.prototype, "strokeWidth", void 0);
+], Canvas$1.prototype, "strokeWidth", undefined);
 __decorate$2([
     contextAttr('lineCap')
-], Canvas$1.prototype, "strokeCap", void 0);
+], Canvas$1.prototype, "strokeCap", undefined);
 __decorate$2([
     contextAttr('lineJoin')
-], Canvas$1.prototype, "strokeJoin", void 0);
+], Canvas$1.prototype, "strokeJoin", undefined);
 __decorate$2([
     contextAttr('lineDashOffset')
-], Canvas$1.prototype, "dashOffset", void 0);
+], Canvas$1.prototype, "dashOffset", undefined);
 __decorate$2([
     contextAttr()
-], Canvas$1.prototype, "miterLimit", void 0);
+], Canvas$1.prototype, "miterLimit", undefined);
 __decorate$2([
     contextAttr()
-], Canvas$1.prototype, "shadowBlur", void 0);
+], Canvas$1.prototype, "shadowBlur", undefined);
 __decorate$2([
     contextAttr()
-], Canvas$1.prototype, "shadowColor", void 0);
+], Canvas$1.prototype, "shadowColor", undefined);
 __decorate$2([
     contextAttr()
-], Canvas$1.prototype, "shadowOffsetX", void 0);
+], Canvas$1.prototype, "shadowOffsetX", undefined);
 __decorate$2([
     contextAttr()
-], Canvas$1.prototype, "shadowOffsetY", void 0);
+], Canvas$1.prototype, "shadowOffsetY", undefined);
 __decorate$2([
     contextAttr()
-], Canvas$1.prototype, "filter", void 0);
+], Canvas$1.prototype, "filter", undefined);
 __decorate$2([
     contextAttr()
-], Canvas$1.prototype, "font", void 0);
+], Canvas$1.prototype, "font", undefined);
 __decorate$2([
     contextAttr()
-], Canvas$1.prototype, "fontKerning", void 0);
+], Canvas$1.prototype, "fontKerning", undefined);
 __decorate$2([
     contextAttr()
-], Canvas$1.prototype, "fontStretch", void 0);
+], Canvas$1.prototype, "fontStretch", undefined);
 __decorate$2([
     contextAttr()
-], Canvas$1.prototype, "fontVariantCaps", void 0);
+], Canvas$1.prototype, "fontVariantCaps", undefined);
 __decorate$2([
     contextAttr()
-], Canvas$1.prototype, "textAlign", void 0);
+], Canvas$1.prototype, "textAlign", undefined);
 __decorate$2([
     contextAttr()
-], Canvas$1.prototype, "textBaseline", void 0);
+], Canvas$1.prototype, "textBaseline", undefined);
 __decorate$2([
     contextAttr()
-], Canvas$1.prototype, "textRendering", void 0);
+], Canvas$1.prototype, "textRendering", undefined);
 __decorate$2([
     contextAttr()
-], Canvas$1.prototype, "wordSpacing", void 0);
+], Canvas$1.prototype, "wordSpacing", undefined);
 __decorate$2([
     contextAttr()
-], Canvas$1.prototype, "letterSpacing", void 0);
+], Canvas$1.prototype, "letterSpacing", undefined);
 __decorate$2([
     contextAttr()
-], Canvas$1.prototype, "direction", void 0);
+], Canvas$1.prototype, "direction", undefined);
 __decorate$2([
     contextMethod()
 ], Canvas$1.prototype, "setTransform", null);
@@ -3418,7 +3418,7 @@ class TaskItem {
         this.task = task;
     }
     run() {
-        return __awaiter$1(this, void 0, void 0, function* () {
+        return __awaiter$1(this, undefined, undefined, function* () {
             try {
                 if (this.task && !this.isComplete && this.parent.running)
                     yield this.task();
@@ -3730,7 +3730,7 @@ class LeaferImage {
     load(onSuccess, onError) {
         if (!this.loading) {
             this.loading = true;
-            ImageManager.tasker.add(() => __awaiter$1(this, void 0, void 0, function* () {
+            ImageManager.tasker.add(() => __awaiter$1(this, undefined, undefined, function* () {
                 return yield Platform.origin.loadImage(this.url).then((img) => {
                     this.ready = true;
                     this.width = img.naturalWidth || img.width;
@@ -5202,8 +5202,7 @@ const LeafBounds = {
     __updateAutoLayout() {
         this.__layout.matrixChanged = true;
         if (this.isBranch) {
-            if (this.leaferIsReady)
-                this.leafer.layouter.addExtra(this);
+            this.__extraUpdate();
             if (this.__.flow) {
                 if (this.__layout.boxChanged)
                     this.__updateFlowLayout();
@@ -5356,7 +5355,7 @@ let Leaf = class Leaf {
     get __worldFlipped() { return this.__world.scaleX < 0 || this.__world.scaleY < 0; }
     get __onlyHitMask() { return this.__hasMask && !this.__.hitChildren; }
     get __ignoreHitWorld() { return (this.__hasMask || this.__hasEraser) && this.__.hitChildren; }
-    get __inLazyBounds() { const { leafer } = this; return leafer && leafer.created && leafer.lazyBounds.hit(this.__world); }
+    get __inLazyBounds() { return this.leaferIsCreated && this.leafer.lazyBounds.hit(this.__world); }
     get pathInputed() { return this.__.__pathInputed; }
     set event(map) { this.on(map); }
     constructor(data) {
@@ -5466,6 +5465,10 @@ let Leaf = class Leaf {
     }
     forceRender(_bounds, _sync) {
         this.forceUpdate('surface');
+    }
+    __extraUpdate() {
+        if (this.leaferIsReady)
+            this.leafer.layouter.addExtra(this);
     }
     __updateWorldMatrix() { }
     __updateLocalMatrix() { }
@@ -6048,7 +6051,7 @@ LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
 OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
 PERFORMANCE OF THIS SOFTWARE.
 ***************************************************************************** */
-/* global Reflect, Promise, SuppressedError, Symbol */
+/* global Reflect, Promise, SuppressedError, Symbol, Iterator */
 
 
 function __decorate$1(decorators, target, key, desc) {
@@ -6142,6 +6145,7 @@ class UIData extends LeafData {
         return t.fill && this.__hasStroke;
     }
     get __clipAfterFill() { const t = this; return (t.cornerRadius || t.innerShadow || t.__pathInputed); }
+    get __hasSurface() { const t = this; return (t.fill || t.stroke); }
     get __autoWidth() { return !this._width; }
     get __autoHeight() { return !this._height; }
     get __autoSide() { return !this._width || !this._height; }
@@ -6645,199 +6649,199 @@ let UI = UI_1 = class UI extends Leaf {
 };
 __decorate$1([
     dataProcessor(UIData)
-], UI.prototype, "__", void 0);
+], UI.prototype, "__", undefined);
 __decorate$1([
     zoomLayerType()
-], UI.prototype, "zoomLayer", void 0);
+], UI.prototype, "zoomLayer", undefined);
 __decorate$1([
     dataType('')
-], UI.prototype, "id", void 0);
+], UI.prototype, "id", undefined);
 __decorate$1([
     dataType('')
-], UI.prototype, "name", void 0);
+], UI.prototype, "name", undefined);
 __decorate$1([
     dataType('')
-], UI.prototype, "className", void 0);
+], UI.prototype, "className", undefined);
 __decorate$1([
     surfaceType('pass-through')
-], UI.prototype, "blendMode", void 0);
+], UI.prototype, "blendMode", undefined);
 __decorate$1([
     opacityType(1)
-], UI.prototype, "opacity", void 0);
+], UI.prototype, "opacity", undefined);
 __decorate$1([
     visibleType(true)
-], UI.prototype, "visible", void 0);
+], UI.prototype, "visible", undefined);
 __decorate$1([
     surfaceType(false)
-], UI.prototype, "locked", void 0);
+], UI.prototype, "locked", undefined);
 __decorate$1([
     sortType(0)
-], UI.prototype, "zIndex", void 0);
+], UI.prototype, "zIndex", undefined);
 __decorate$1([
     maskType(false)
-], UI.prototype, "mask", void 0);
+], UI.prototype, "mask", undefined);
 __decorate$1([
     eraserType(false)
-], UI.prototype, "eraser", void 0);
+], UI.prototype, "eraser", undefined);
 __decorate$1([
     positionType(0, true)
-], UI.prototype, "x", void 0);
+], UI.prototype, "x", undefined);
 __decorate$1([
     positionType(0, true)
-], UI.prototype, "y", void 0);
+], UI.prototype, "y", undefined);
 __decorate$1([
     boundsType(100, true)
-], UI.prototype, "width", void 0);
+], UI.prototype, "width", undefined);
 __decorate$1([
     boundsType(100, true)
-], UI.prototype, "height", void 0);
+], UI.prototype, "height", undefined);
 __decorate$1([
     scaleType(1, true)
-], UI.prototype, "scaleX", void 0);
+], UI.prototype, "scaleX", undefined);
 __decorate$1([
     scaleType(1, true)
-], UI.prototype, "scaleY", void 0);
+], UI.prototype, "scaleY", undefined);
 __decorate$1([
     rotationType(0, true)
-], UI.prototype, "rotation", void 0);
+], UI.prototype, "rotation", undefined);
 __decorate$1([
     rotationType(0, true)
-], UI.prototype, "skewX", void 0);
+], UI.prototype, "skewX", undefined);
 __decorate$1([
     rotationType(0, true)
-], UI.prototype, "skewY", void 0);
+], UI.prototype, "skewY", undefined);
 __decorate$1([
     positionType(0, true)
-], UI.prototype, "offsetX", void 0);
+], UI.prototype, "offsetX", undefined);
 __decorate$1([
     positionType(0, true)
-], UI.prototype, "offsetY", void 0);
+], UI.prototype, "offsetY", undefined);
 __decorate$1([
     positionType(0, true)
-], UI.prototype, "scrollX", void 0);
+], UI.prototype, "scrollX", undefined);
 __decorate$1([
     positionType(0, true)
-], UI.prototype, "scrollY", void 0);
+], UI.prototype, "scrollY", undefined);
 __decorate$1([
     autoLayoutType()
-], UI.prototype, "origin", void 0);
+], UI.prototype, "origin", undefined);
 __decorate$1([
     autoLayoutType()
-], UI.prototype, "around", void 0);
+], UI.prototype, "around", undefined);
 __decorate$1([
     dataType(false)
-], UI.prototype, "lazy", void 0);
+], UI.prototype, "lazy", undefined);
 __decorate$1([
     naturalBoundsType(1)
-], UI.prototype, "pixelRatio", void 0);
+], UI.prototype, "pixelRatio", undefined);
 __decorate$1([
     pathInputType()
-], UI.prototype, "path", void 0);
+], UI.prototype, "path", undefined);
 __decorate$1([
     pathType()
-], UI.prototype, "windingRule", void 0);
+], UI.prototype, "windingRule", undefined);
 __decorate$1([
     pathType(true)
-], UI.prototype, "closed", void 0);
+], UI.prototype, "closed", undefined);
 __decorate$1([
     boundsType(0)
-], UI.prototype, "padding", void 0);
+], UI.prototype, "padding", undefined);
 __decorate$1([
     boundsType(false)
-], UI.prototype, "lockRatio", void 0);
+], UI.prototype, "lockRatio", undefined);
 __decorate$1([
     boundsType()
-], UI.prototype, "widthRange", void 0);
+], UI.prototype, "widthRange", undefined);
 __decorate$1([
     boundsType()
-], UI.prototype, "heightRange", void 0);
+], UI.prototype, "heightRange", undefined);
 __decorate$1([
     dataType(false)
-], UI.prototype, "draggable", void 0);
+], UI.prototype, "draggable", undefined);
 __decorate$1([
     dataType()
-], UI.prototype, "dragBounds", void 0);
+], UI.prototype, "dragBounds", undefined);
 __decorate$1([
     dataType(false)
-], UI.prototype, "editable", void 0);
+], UI.prototype, "editable", undefined);
 __decorate$1([
     hitType(true)
-], UI.prototype, "hittable", void 0);
+], UI.prototype, "hittable", undefined);
 __decorate$1([
     hitType('path')
-], UI.prototype, "hitFill", void 0);
+], UI.prototype, "hitFill", undefined);
 __decorate$1([
     strokeType('path')
-], UI.prototype, "hitStroke", void 0);
+], UI.prototype, "hitStroke", undefined);
 __decorate$1([
     hitType(false)
-], UI.prototype, "hitBox", void 0);
+], UI.prototype, "hitBox", undefined);
 __decorate$1([
     hitType(true)
-], UI.prototype, "hitChildren", void 0);
+], UI.prototype, "hitChildren", undefined);
 __decorate$1([
     hitType(true)
-], UI.prototype, "hitSelf", void 0);
+], UI.prototype, "hitSelf", undefined);
 __decorate$1([
     hitType()
-], UI.prototype, "hitRadius", void 0);
+], UI.prototype, "hitRadius", undefined);
 __decorate$1([
     cursorType('')
-], UI.prototype, "cursor", void 0);
+], UI.prototype, "cursor", undefined);
 __decorate$1([
     surfaceType()
-], UI.prototype, "fill", void 0);
+], UI.prototype, "fill", undefined);
 __decorate$1([
     strokeType()
-], UI.prototype, "stroke", void 0);
+], UI.prototype, "stroke", undefined);
 __decorate$1([
     strokeType('inside')
-], UI.prototype, "strokeAlign", void 0);
+], UI.prototype, "strokeAlign", undefined);
 __decorate$1([
     strokeType(1)
-], UI.prototype, "strokeWidth", void 0);
+], UI.prototype, "strokeWidth", undefined);
 __decorate$1([
     strokeType(false)
-], UI.prototype, "strokeWidthFixed", void 0);
+], UI.prototype, "strokeWidthFixed", undefined);
 __decorate$1([
     strokeType('none')
-], UI.prototype, "strokeCap", void 0);
+], UI.prototype, "strokeCap", undefined);
 __decorate$1([
     strokeType('miter')
-], UI.prototype, "strokeJoin", void 0);
+], UI.prototype, "strokeJoin", undefined);
 __decorate$1([
     strokeType()
-], UI.prototype, "dashPattern", void 0);
+], UI.prototype, "dashPattern", undefined);
 __decorate$1([
     strokeType()
-], UI.prototype, "dashOffset", void 0);
+], UI.prototype, "dashOffset", undefined);
 __decorate$1([
     strokeType(10)
-], UI.prototype, "miterLimit", void 0);
+], UI.prototype, "miterLimit", undefined);
 __decorate$1([
     pathType(0)
-], UI.prototype, "cornerRadius", void 0);
+], UI.prototype, "cornerRadius", undefined);
 __decorate$1([
     pathType()
-], UI.prototype, "cornerSmoothing", void 0);
+], UI.prototype, "cornerSmoothing", undefined);
 __decorate$1([
     effectType()
-], UI.prototype, "shadow", void 0);
+], UI.prototype, "shadow", undefined);
 __decorate$1([
     effectType()
-], UI.prototype, "innerShadow", void 0);
+], UI.prototype, "innerShadow", undefined);
 __decorate$1([
     effectType()
-], UI.prototype, "blur", void 0);
+], UI.prototype, "blur", undefined);
 __decorate$1([
     effectType()
-], UI.prototype, "backgroundBlur", void 0);
+], UI.prototype, "backgroundBlur", undefined);
 __decorate$1([
     effectType()
-], UI.prototype, "grayscale", void 0);
+], UI.prototype, "grayscale", undefined);
 __decorate$1([
     dataType({})
-], UI.prototype, "data", void 0);
+], UI.prototype, "data", undefined);
 __decorate$1([
     rewrite(Leaf.prototype.reset)
 ], UI.prototype, "reset", null);
@@ -6898,7 +6902,7 @@ let Group = class Group extends UI {
 };
 __decorate$1([
     dataProcessor(GroupData)
-], Group.prototype, "__", void 0);
+], Group.prototype, "__", undefined);
 Group = __decorate$1([
     useModule(Branch),
     registerUI()
@@ -7069,8 +7073,6 @@ let Leafer = Leafer_1 = class Leafer extends Group {
     __setAttr(attrName, newValue) {
         if (this.canvas) {
             if (canvasSizeAttrs.includes(attrName)) {
-                if (!newValue)
-                    debug$4.warn(attrName + ' is 0');
                 this.__changeCanvasSize(attrName, newValue);
             }
             else if (attrName === 'fill') {
@@ -7273,10 +7275,10 @@ let Leafer = Leafer_1 = class Leafer extends Group {
 Leafer.list = new LeafList();
 __decorate$1([
     dataProcessor(LeaferData)
-], Leafer.prototype, "__", void 0);
+], Leafer.prototype, "__", undefined);
 __decorate$1([
     boundsType()
-], Leafer.prototype, "pixelRatio", void 0);
+], Leafer.prototype, "pixelRatio", undefined);
 Leafer = Leafer_1 = __decorate$1([
     registerUI()
 ], Leafer);
@@ -7289,7 +7291,7 @@ let Rect = class Rect extends UI {
 };
 __decorate$1([
     dataProcessor(RectData)
-], Rect.prototype, "__", void 0);
+], Rect.prototype, "__", undefined);
 Rect = __decorate$1([
     useModule(RectRender),
     rewriteAble(),
@@ -7314,6 +7316,8 @@ let Box = class Box extends Group {
         const data = this.__;
         if (this.children.length) {
             if (data.__autoSide) {
+                if (data.__hasSurface)
+                    this.__extraUpdate();
                 super.__updateBoxBounds();
                 const { boxBounds } = this.__layout;
                 if (!data.__autoSize) {
@@ -7378,13 +7382,13 @@ let Box = class Box extends Group {
 };
 __decorate$1([
     dataProcessor(BoxData)
-], Box.prototype, "__", void 0);
+], Box.prototype, "__", undefined);
 __decorate$1([
     dataType(false)
-], Box.prototype, "resizeChildren", void 0);
+], Box.prototype, "resizeChildren", undefined);
 __decorate$1([
     affectRenderBoundsType('show')
-], Box.prototype, "overflow", void 0);
+], Box.prototype, "overflow", undefined);
 __decorate$1([
     rewrite(rect$1.__updateStrokeSpread)
 ], Box.prototype, "__updateStrokeSpread", null);
@@ -7423,13 +7427,13 @@ let Frame = class Frame extends Box {
 };
 __decorate$1([
     dataProcessor(FrameData)
-], Frame.prototype, "__", void 0);
+], Frame.prototype, "__", undefined);
 __decorate$1([
     surfaceType('#FFFFFF')
-], Frame.prototype, "fill", void 0);
+], Frame.prototype, "fill", undefined);
 __decorate$1([
     affectRenderBoundsType('hide')
-], Frame.prototype, "overflow", void 0);
+], Frame.prototype, "overflow", undefined);
 Frame = __decorate$1([
     registerUI()
 ], Frame);
@@ -7476,16 +7480,16 @@ let Ellipse = class Ellipse extends UI {
 };
 __decorate$1([
     dataProcessor(EllipseData)
-], Ellipse.prototype, "__", void 0);
+], Ellipse.prototype, "__", undefined);
 __decorate$1([
     pathType(0)
-], Ellipse.prototype, "innerRadius", void 0);
+], Ellipse.prototype, "innerRadius", undefined);
 __decorate$1([
     pathType(0)
-], Ellipse.prototype, "startAngle", void 0);
+], Ellipse.prototype, "startAngle", undefined);
 __decorate$1([
     pathType(0)
-], Ellipse.prototype, "endAngle", void 0);
+], Ellipse.prototype, "endAngle", undefined);
 Ellipse = __decorate$1([
     registerUI()
 ], Ellipse);
@@ -7544,22 +7548,22 @@ let Line = class Line extends UI {
 };
 __decorate$1([
     dataProcessor(LineData)
-], Line.prototype, "__", void 0);
+], Line.prototype, "__", undefined);
 __decorate$1([
     affectStrokeBoundsType('center')
-], Line.prototype, "strokeAlign", void 0);
+], Line.prototype, "strokeAlign", undefined);
 __decorate$1([
     boundsType(0)
-], Line.prototype, "height", void 0);
+], Line.prototype, "height", undefined);
 __decorate$1([
     pathType()
-], Line.prototype, "points", void 0);
+], Line.prototype, "points", undefined);
 __decorate$1([
     pathType(0)
-], Line.prototype, "curve", void 0);
+], Line.prototype, "curve", undefined);
 __decorate$1([
     pathType(false)
-], Line.prototype, "closed", void 0);
+], Line.prototype, "closed", undefined);
 Line = __decorate$1([
     registerUI()
 ], Line);
@@ -7592,16 +7596,16 @@ let Polygon = class Polygon extends UI {
 };
 __decorate$1([
     dataProcessor(PolygonData)
-], Polygon.prototype, "__", void 0);
+], Polygon.prototype, "__", undefined);
 __decorate$1([
     pathType(3)
-], Polygon.prototype, "sides", void 0);
+], Polygon.prototype, "sides", undefined);
 __decorate$1([
     pathType()
-], Polygon.prototype, "points", void 0);
+], Polygon.prototype, "points", undefined);
 __decorate$1([
     pathType(0)
-], Polygon.prototype, "curve", void 0);
+], Polygon.prototype, "curve", undefined);
 __decorate$1([
     rewrite(line.__updateRenderPath)
 ], Polygon.prototype, "__updateRenderPath", null);
@@ -7633,13 +7637,13 @@ let Star = class Star extends UI {
 };
 __decorate$1([
     dataProcessor(StarData)
-], Star.prototype, "__", void 0);
+], Star.prototype, "__", undefined);
 __decorate$1([
     pathType(5)
-], Star.prototype, "corners", void 0);
+], Star.prototype, "corners", undefined);
 __decorate$1([
     pathType(0.382)
-], Star.prototype, "innerRadius", void 0);
+], Star.prototype, "innerRadius", undefined);
 Star = __decorate$1([
     registerUI()
 ], Star);
@@ -7661,10 +7665,10 @@ let Image$1 = class Image extends Rect {
 };
 __decorate$1([
     dataProcessor(ImageData)
-], Image$1.prototype, "__", void 0);
+], Image$1.prototype, "__", undefined);
 __decorate$1([
     boundsType('')
-], Image$1.prototype, "url", void 0);
+], Image$1.prototype, "url", undefined);
 Image$1 = __decorate$1([
     registerUI()
 ], Image$1);
@@ -7726,25 +7730,25 @@ let Canvas = class Canvas extends Rect {
 };
 __decorate$1([
     dataProcessor(CanvasData)
-], Canvas.prototype, "__", void 0);
+], Canvas.prototype, "__", undefined);
 __decorate$1([
     resizeType(100)
-], Canvas.prototype, "width", void 0);
+], Canvas.prototype, "width", undefined);
 __decorate$1([
     resizeType(100)
-], Canvas.prototype, "height", void 0);
+], Canvas.prototype, "height", undefined);
 __decorate$1([
     resizeType(1)
-], Canvas.prototype, "pixelRatio", void 0);
+], Canvas.prototype, "pixelRatio", undefined);
 __decorate$1([
     resizeType(true)
-], Canvas.prototype, "smooth", void 0);
+], Canvas.prototype, "smooth", undefined);
 __decorate$1([
     dataType(false)
-], Canvas.prototype, "safeResize", void 0);
+], Canvas.prototype, "safeResize", undefined);
 __decorate$1([
     resizeType()
-], Canvas.prototype, "contextSettings", void 0);
+], Canvas.prototype, "contextSettings", undefined);
 Canvas = __decorate$1([
     registerUI()
 ], Canvas);
@@ -7835,76 +7839,76 @@ let Text = class Text extends UI {
 };
 __decorate$1([
     dataProcessor(TextData)
-], Text.prototype, "__", void 0);
+], Text.prototype, "__", undefined);
 __decorate$1([
     boundsType(0)
-], Text.prototype, "width", void 0);
+], Text.prototype, "width", undefined);
 __decorate$1([
     boundsType(0)
-], Text.prototype, "height", void 0);
+], Text.prototype, "height", undefined);
 __decorate$1([
     dataType(false)
-], Text.prototype, "resizeFontSize", void 0);
+], Text.prototype, "resizeFontSize", undefined);
 __decorate$1([
     surfaceType('#000000')
-], Text.prototype, "fill", void 0);
+], Text.prototype, "fill", undefined);
 __decorate$1([
     affectStrokeBoundsType('outside')
-], Text.prototype, "strokeAlign", void 0);
+], Text.prototype, "strokeAlign", undefined);
 __decorate$1([
     hitType('all')
-], Text.prototype, "hitFill", void 0);
+], Text.prototype, "hitFill", undefined);
 __decorate$1([
     boundsType('')
-], Text.prototype, "text", void 0);
+], Text.prototype, "text", undefined);
 __decorate$1([
-    boundsType('L')
-], Text.prototype, "fontFamily", void 0);
+    boundsType('caption')
+], Text.prototype, "fontFamily", undefined);
 __decorate$1([
     boundsType(12)
-], Text.prototype, "fontSize", void 0);
+], Text.prototype, "fontSize", undefined);
 __decorate$1([
     boundsType('normal')
-], Text.prototype, "fontWeight", void 0);
+], Text.prototype, "fontWeight", undefined);
 __decorate$1([
     boundsType(false)
-], Text.prototype, "italic", void 0);
+], Text.prototype, "italic", undefined);
 __decorate$1([
     boundsType('none')
-], Text.prototype, "textCase", void 0);
+], Text.prototype, "textCase", undefined);
 __decorate$1([
     boundsType('none')
-], Text.prototype, "textDecoration", void 0);
+], Text.prototype, "textDecoration", undefined);
 __decorate$1([
     boundsType(0)
-], Text.prototype, "letterSpacing", void 0);
+], Text.prototype, "letterSpacing", undefined);
 __decorate$1([
     boundsType({ type: 'percent', value: 1.5 })
-], Text.prototype, "lineHeight", void 0);
+], Text.prototype, "lineHeight", undefined);
 __decorate$1([
     boundsType(0)
-], Text.prototype, "paraIndent", void 0);
+], Text.prototype, "paraIndent", undefined);
 __decorate$1([
     boundsType(0)
-], Text.prototype, "paraSpacing", void 0);
+], Text.prototype, "paraSpacing", undefined);
 __decorate$1([
     boundsType('x')
-], Text.prototype, "writingMode", void 0);
+], Text.prototype, "writingMode", undefined);
 __decorate$1([
     boundsType('left')
-], Text.prototype, "textAlign", void 0);
+], Text.prototype, "textAlign", undefined);
 __decorate$1([
     boundsType('top')
-], Text.prototype, "verticalAlign", void 0);
+], Text.prototype, "verticalAlign", undefined);
 __decorate$1([
     boundsType(true)
-], Text.prototype, "autoSizeAlign", void 0);
+], Text.prototype, "autoSizeAlign", undefined);
 __decorate$1([
     boundsType('normal')
-], Text.prototype, "textWrap", void 0);
+], Text.prototype, "textWrap", undefined);
 __decorate$1([
     boundsType('show')
-], Text.prototype, "textOverflow", void 0);
+], Text.prototype, "textOverflow", undefined);
 Text = __decorate$1([
     registerUI()
 ], Text);
@@ -7917,10 +7921,10 @@ let Path = class Path extends UI {
 };
 __decorate$1([
     dataProcessor(PathData)
-], Path.prototype, "__", void 0);
+], Path.prototype, "__", undefined);
 __decorate$1([
     affectStrokeBoundsType('center')
-], Path.prototype, "strokeAlign", void 0);
+], Path.prototype, "strokeAlign", undefined);
 Path = __decorate$1([
     registerUI()
 ], Path);
@@ -7959,10 +7963,10 @@ let Pen = class Pen extends Group {
 };
 __decorate$1([
     dataProcessor(PenData)
-], Pen.prototype, "__", void 0);
+], Pen.prototype, "__", undefined);
 __decorate$1([
     penPathType()
-], Pen.prototype, "path", void 0);
+], Pen.prototype, "path", undefined);
 Pen = __decorate$1([
     useModule(PathCreator, ['set', 'path', 'paint']),
     registerUI()
@@ -7989,7 +7993,7 @@ LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
 OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
 PERFORMANCE OF THIS SOFTWARE.
 ***************************************************************************** */
-/* global Reflect, Promise, SuppressedError, Symbol */
+/* global Reflect, Promise, SuppressedError, Symbol, Iterator */
 
 
 function __decorate(decorators, target, key, desc) {
@@ -9174,9 +9178,9 @@ leaf.__hitWorld = function (point) {
     }
     return this.__hit(inner);
 };
-leaf.__hitFill = function (inner) { var _a; return (_a = this.__hitCanvas) === null || _a === void 0 ? void 0 : _a.hitFill(inner, this.__.windingRule); };
-leaf.__hitStroke = function (inner, strokeWidth) { var _a; return (_a = this.__hitCanvas) === null || _a === void 0 ? void 0 : _a.hitStroke(inner, strokeWidth); };
-leaf.__hitPixel = function (inner) { var _a; return (_a = this.__hitCanvas) === null || _a === void 0 ? void 0 : _a.hitPixel(inner, this.__layout.renderBounds, this.__hitCanvas.hitScale); };
+leaf.__hitFill = function (inner) { var _a; return (_a = this.__hitCanvas) === null || _a === undefined ? undefined : _a.hitFill(inner, this.__.windingRule); };
+leaf.__hitStroke = function (inner, strokeWidth) { var _a; return (_a = this.__hitCanvas) === null || _a === undefined ? undefined : _a.hitStroke(inner, strokeWidth); };
+leaf.__hitPixel = function (inner) { var _a; return (_a = this.__hitCanvas) === null || _a === undefined ? undefined : _a.hitPixel(inner, this.__layout.renderBounds, this.__hitCanvas.hitScale); };
 leaf.__drawHitPath = function (canvas) { if (canvas)
     this.__drawRenderPath(canvas); };
 
@@ -9809,7 +9813,7 @@ class Layouter {
     }
     partLayout() {
         var _a;
-        if (!((_a = this.__updatedList) === null || _a === void 0 ? void 0 : _a.length))
+        if (!((_a = this.__updatedList) === null || _a === undefined ? undefined : _a.length))
             return;
         const t = Run.start('PartLayout');
         const { target, __updatedList: updateList } = this;
@@ -11192,7 +11196,7 @@ LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
 OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
 PERFORMANCE OF THIS SOFTWARE.
 ***************************************************************************** */
-/* global Reflect, Promise, SuppressedError, Symbol */
+/* global Reflect, Promise, SuppressedError, Symbol, Iterator */
 
 
 function __awaiter(thisArg, _arguments, P, generator) {
@@ -11253,7 +11257,7 @@ function checkImage(ui, canvas, paint, allowPaint) {
             }
             else {
                 if (!paint.patternTask) {
-                    paint.patternTask = ImageManager.patternTasker.add(() => __awaiter(this, void 0, void 0, function* () {
+                    paint.patternTask = ImageManager.patternTasker.add(() => __awaiter(this, undefined, undefined, function* () {
                         paint.patternTask = null;
                         if (canvas.bounds.hit(ui.__nowWorld))
                             createPattern(ui, paint, pixelRatio);
@@ -11409,7 +11413,7 @@ function shadow(ui, current, shape) {
     const end = shadow.length - 1;
     toOffsetOutBounds$1(bounds, offsetOutBounds$1);
     shadow.forEach((item, index) => {
-        other.setWorldShadow((offsetOutBounds$1.offsetX + item.x * scaleX), (offsetOutBounds$1.offsetY + item.y * scaleY), item.blur * scaleX, item.color);
+        other.setWorldShadow((offsetOutBounds$1.offsetX + item.x * scaleX), (offsetOutBounds$1.offsetY + item.y * scaleY), item.blur * scaleX, ColorConvert.string(item.color));
         spreadScale = item.spread ? 1 + item.spread * 2 / (__layout.boxBounds.width + (__layout.strokeBoxSpread || 0) * 2) : 0;
         drawWorldShadow(other, offsetOutBounds$1, spreadScale, shape);
         copyBounds = bounds;
@@ -11485,7 +11489,7 @@ function innerShadow(ui, current, shape) {
             other.copyWorld(shape.canvas, shapeBounds, bounds, 'source-out');
             copyBounds = bounds;
         }
-        other.fillWorld(copyBounds, item.color, 'source-in');
+        other.fillWorld(copyBounds, ColorConvert.string(item.color), 'source-in');
         if (ui.__worldFlipped) {
             current.copyWorldByReset(other, copyBounds, nowWorld, item.blendMode);
         }
@@ -22595,7 +22599,6 @@ const loadAsset = (_a) => __awaiter$2(void 0, [_a], void 0, function* ({ baseUrl
     return skeletonData;
 });
 
-console.log(window.location.pathname);
 (() => __awaiter$2(void 0, void 0, void 0, function* () {
     const skeletonData = yield loadAsset({
         baseUrl: `models/spineboy/`,

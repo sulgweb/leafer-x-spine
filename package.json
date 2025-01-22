@@ -39,6 +39,7 @@
     "@typescript-eslint/parser": "^5.54.1",
     "cross-env": "^7.0.3",
     "eslint": "^8.49.0",
+    "gh-pages": "^6.3.0",
     "jsdom": "^22.0.0",
     "rollup": "^3.29.2",
     "rollup-plugin-copy": "^3.5.0",

@@ -31,4 +31,7 @@ const spine = new Spine({
 
 // 添加到leafer
 leafer.add(spine)
+
+// 切换动作
+spine.animationState.setAnimation(0, '动作名称', true)
 ```

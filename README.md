@@ -4,12 +4,18 @@
 
 [https://sulgweb.github.io/leafer-x-spine/](https://sulgweb.github.io/leafer-x-spine/)
 
+## 安装
+
+```shell
+npm i leafer-x-spine
+```
+
 ## 使用
 
 ```javascript
 import { Leafer, Rect } from 'leafer-ui'
 
-import { Spine, loadAsset } from './src' // 引入插件代码
+import { Spine, loadAsset } from 'leafer-x-spine' // 引入插件代码
 
 // 加载骨骼模型
 const skeletonData = await loadAsset({
